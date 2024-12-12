@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Note_app" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Màu nền ứng dụng -->
+        <item name="android:windowBackground">@color/app_background</item>
+
+        <!-- Màu thanh trạng thái -->
+        <item name="android:statusBarColor">@color/app_background</item>
+
+        <!-- Nếu màu nền sáng, thiết lập biểu tượng thanh trạng thái màu tối -->
+        <item name="android:windowLightStatusBar">true</item> <!-- Đặt thành true nếu muốn biểu tượng tối -->
+    </style>
+
+    <!-- Kế thừa theme từ Base.Theme để sử dụng -->
+    <style name="Theme.Note_app" parent="Base.Theme.Note_app" />
+</resources>

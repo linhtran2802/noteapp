@@ -1,0 +1,5 @@
+<!-- res/drawable/rounded_backr.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#F9F5EE" />
+    <corners android:radius="30dp" />
+</shape>

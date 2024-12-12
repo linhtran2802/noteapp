@@ -1,0 +1,5 @@
+<!-- res/drawable/rounded_search_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#69DECFB9" /> <!-- Màu xanh nhạt -->
+    <corners android:radius="24dp" /> <!-- Bo góc tròn 24dp -->
+</shape>

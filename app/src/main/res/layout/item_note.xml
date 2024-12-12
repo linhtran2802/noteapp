@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:background="@drawable/rounded_note_background">
+
+    <!-- Tiêu đề ghi chú -->
+    <TextView
+        android:id="@+id/noteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiêu đề ghi chú"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#9B826C"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Mô tả ghi chú -->
+    <TextView
+        android:id="@+id/noteDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mô tả ghi chú"
+        android:textColor="#9B826C"
+        android:layout_below="@id/noteTitle"
+        android:layout_marginTop="4dp" />
+
+    <!-- Thời gian -->
+    <TextView
+        android:id="@+id/noteTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thời gian: 10/10/2022 10:00"
+        android:textSize="12sp"
+        android:textColor="#9B826C"
+        android:layout_below="@id/noteDescription"
+        android:layout_marginTop="8dp" />
+
+    <!-- Tag -->
+    <TextView
+        android:id="@+id/noteTags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tags"
+        android:textColor="#0288D1"
+        android:textSize="14sp"
+        android:paddingTop="4dp"
+        android:layout_below="@id/noteTime"
+        android:visibility="gone" />
+
+    <!-- Icon Ghim -->
+    <ImageView
+        android:id="@+id/pinIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ghim"
+         android:visibility="gone" />
+</RelativeLayout>

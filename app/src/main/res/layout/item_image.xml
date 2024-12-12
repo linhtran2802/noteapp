@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Hiển thị tên file ảnh -->
+    <TextView
+        android:id="@+id/imageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tệp hình ảnh"
+        android:textColor="#9B826C"
+        android:textSize="16sp"
+        android:layout_alignParentStart="true"
+        android:paddingEnd="8dp" />
+
+    <!-- Nút "X" để xóa ảnh -->
+    <ImageButton
+        android:id="@+id/removeImageButton"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_delete"
+        android:background="?attr/selectableItemBackground"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"/>
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<!-- res/drawable/rounded_note_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#DBCDC0" /> <!-- Màu tím đậm hơn để tăng độ tương phản -->
+    <corners android:radius="25dp" /> <!-- Bo góc tròn 16dp -->
+</shape>

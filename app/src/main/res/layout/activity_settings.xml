@@ -1,0 +1,202 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFAF7">
+
+    <TextView
+        android:id="@+id/settingsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tài khoản của tôi"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#9B826C"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/fraglimbah_swiperefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_below="@id/settingsTitle"
+        android:layout_marginHorizontal="20dp">
+        <!-- Khung bo tròn chứa thông tin người dùng -->
+        <LinearLayout
+            android:id="@+id/userInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_background"
+            android:padding="26dp"
+            android:gravity="center_horizontal">
+
+            <!-- Ảnh đại diện -->
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/rounded_circle_background"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/profileImageView"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user"/>
+            </FrameLayout>
+
+
+            <!-- Tên người dùng -->
+            <TextView
+                android:id="@+id/usernameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="admin"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:textColor="#9B826C" />
+
+            <!-- Số điện thoại -->
+            <TextView
+                android:id="@+id/phoneTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0123456789"
+                android:layout_marginTop="4dp"
+                android:textColor="#9B826C" />
+
+            <!-- Email -->
+            <TextView
+                android:id="@+id/emailTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="admin@gmail.com"
+                android:layout_marginTop="4dp"
+                android:textColor="#9B826C" />
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <!-- Layout cho các mục Settings với nền bo tròn -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fraglimbah_swiperefreshlayout"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/user1">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/privacyPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:drawablePadding="0dp"
+                android:padding="16dp"
+                android:text="Thông tin tài khoản"
+                android:gravity="center_vertical"
+                android:textColor="#9B826C"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/delete">
+            </ImageView>
+            <TextView
+                android:id="@+id/deleteAccount"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:drawablePadding="8dp"
+                android:padding="16dp"
+                android:text="Xóa tài khoản"
+                android:layout_marginLeft="5dp"
+                android:textColor="#9B826C"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/logout">
+            </ImageView>
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:drawablePadding="8dp"
+                android:padding="16dp"
+                android:layout_marginLeft="5dp"
+                android:text="Đăng xuất"
+                android:textColor="#9B826C"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Layout điều hướng dưới cùng full width và không có padding -->
+    <RelativeLayout
+        android:id="@+id/navigation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="20dp">
+
+        <!-- Nút Home bên trái -->
+        <LinearLayout
+            android:id="@+id/homeButtonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="32dp">
+
+            <ImageView
+                android:id="@+id/homeButton"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/home1"
+                android:contentDescription="Home" />
+        </LinearLayout>
+
+        <!-- Nút Settings bên phải và biểu thị đã chọn -->
+        <LinearLayout
+            android:id="@+id/settingsButtonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="32dp">
+
+            <ImageView
+                android:id="@+id/settingsButton"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/settings1"
+                android:contentDescription="Settings" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

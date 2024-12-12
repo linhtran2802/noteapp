@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">note_app</string>
+    <string name="admob_app_id">ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy</string> <!-- Thay bằng ID AdMob thật của bạn -->
+</resources>

@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFAF7"
+    tools:context=".NoteDetailActivity">
+
+    <!-- Phần hiển thị ghi chú -->
+    <include
+        android:id="@+id/noteDetailContent"
+        layout="@layout/item_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- RecyclerView danh sách tag -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tagRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/noteDetailContent"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="16dp"
+        android:scrollbars="horizontal"
+        android:clipToPadding="false" />
+
+    <!-- Nút thêm tag mới -->
+    <Button
+        android:id="@+id/addTagButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tagRecyclerView"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#DBCDC0"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="Thêm Tag Mới"
+        android:textColor="#FFF"
+        android:textSize="16sp" />
+
+    <!-- Thanh chức năng ở cuối -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFF"
+        android:gravity="center"
+        android:padding="12dp">
+
+        <!-- Nút ghim -->
+        <ImageButton
+            android:id="@+id/noteDetailPinButton"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Pin Note"
+            android:src="@drawable/ghim"
+            android:tint="#9B826C"
+            android:scaleType="centerInside" />
+
+        <!-- Nút xóa -->
+        <ImageButton
+            android:id="@+id/noteDetailDeleteButton"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Delete Note"
+            android:src="@drawable/delete"
+            android:tint="#9B826C"
+            android:scaleType="centerInside" />
+
+        <!-- Nút mật khẩu -->
+        <ImageButton
+            android:id="@+id/noteDetailPasswordButton"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Set Password"
+            android:src="@drawable/password"
+            android:tint="#9B826C"
+            android:scaleType="centerInside" />
+
+        <!-- Nút chia sẻ -->
+        <ImageButton
+            android:id="@+id/noteDetailShareButton"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Share Note"
+            android:src="@drawable/share2"
+            android:tint="#9B826C"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+</RelativeLayout>

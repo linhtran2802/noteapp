@@ -1,0 +1,177 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FDFAF7">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Tiêu đề trang -->
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thêm ghi chú"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="#9B826C"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Nút Back -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:contentDescription="Back"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp" />
+
+        <!-- Tiêu đề ghi chú với viền -->
+        <EditText
+            android:id="@+id/titleEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tiêu Đề"
+            android:textColor="#9B826C"
+            android:textColorHint="#F9F5EE"
+            android:padding="12dp"
+            android:layout_below="@id/pageTitle"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/navigation_background" />
+
+
+        <!-- Mô tả ghi chú với viền -->
+        <EditText
+            android:id="@+id/descriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="Mô tả"
+            android:textColor="#9B826C"
+            android:textColorHint="#F9F5EE"
+            android:padding="12dp"
+            android:layout_below="@id/titleEditText"
+            android:layout_marginTop="8dp"
+            android:scrollbars="vertical"
+            android:maxLines="5"
+            android:overScrollMode="always"
+            android:background="@drawable/navigation_background" />
+
+
+        <!-- Nút thêm hình ảnh -->
+        <ImageButton
+            android:id="@+id/addImageButton"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:src="@drawable/add_i"
+            android:layout_below="@id/descriptionEditText"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#FDFAF7"
+            android:contentDescription="Add Image"
+            android:scaleType="fitCenter" />
+
+        <!-- Text "Hình Ảnh" -->
+        <TextView
+            android:id="@+id/imageTextLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hình Ảnh"
+            android:textSize="14sp"
+            android:textColor="#9B826C"
+            android:layout_below="@id/addImageButton" />
+
+        <!-- RecyclerView hiển thị danh sách ảnh đã chọn với viền -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/imageRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/imageTextLabel"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:background="@drawable/navigation_background" />
+        <!-- Nút thêm âm thanh -->
+        <ImageButton
+            android:id="@+id/addAudioButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/add_m"
+            android:layout_below="@id/imageRecyclerView"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="0dp"
+            android:backgroundTint="#FDFAF7"
+            android:contentDescription="Add Audio"
+            android:scaleType="fitCenter" />
+
+        <!-- Text "Âm Thanh" -->
+        <TextView
+            android:id="@+id/audioTextLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Âm Thanh"
+            android:textSize="14sp"
+            android:textColor="#9B826C"
+            android:layout_below="@id/addAudioButton"/>
+
+
+        <!-- RecyclerView hiển thị danh sách âm thanh đã chọn với viền -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/audioRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/audioTextLabel"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:background="@drawable/navigation_background" />
+
+        <!-- TextView hiển thị thời gian nhắc nhở -->
+        <TextView
+            android:id="@+id/reminderTimeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thời gian nhắc nhở"
+            android:textSize="16sp"
+            android:textColor="#757575"
+            android:padding="8dp"
+            android:layout_below="@id/audioRecyclerView"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Nút chọn lịch nhắc nhở -->
+
+
+        <!-- Nút lưu -->
+
+        <Button
+            android:id="@+id/setReminderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:layout_below="@id/reminderTimeTextView"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="#FDFAF7"
+            android:drawableTop="@drawable/reminder"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="Đặt lời nhắc"
+            android:textColor="#9B826C"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/reminderTimeTextView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FDFAF7"
+            android:text="Lưu"
+            android:textColor="#9B826C"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+</ScrollView>

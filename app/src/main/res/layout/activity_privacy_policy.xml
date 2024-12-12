@@ -1,0 +1,134 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="0dp"
+    android:gravity="center"
+    android:background="@drawable/br_acc"
+    tools:context=".PrivacyPolicyActivity">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:tint="#DBCDC0"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Back"
+        android:src="@drawable/back" />
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="410dp">
+
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="70dp"
+            android:layout_height="81dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pin"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="35dp"/>
+
+        <RelativeLayout
+            android:layout_width="290dp"
+            android:layout_height="270dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="75dp"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:hint="Username"
+                android:textSize="14dp"
+                android:minHeight="48dp"
+                android:padding="16dp"
+                android:singleLine="true"
+                android:scrollHorizontally="true"/>
+
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_below="@id/usernameEditText"
+                android:textSize="14dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:padding="16dp"
+                android:singleLine="true"
+                android:scrollHorizontally="true"/>
+            <EditText
+                android:id="@+id/phoneEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_below="@id/emailEditText"
+                android:textSize="14dp"
+                android:hint="Phone"
+                android:inputType="phone"
+                android:minHeight="48dp"
+                android:padding="16dp"
+                android:singleLine="true"
+                android:scrollHorizontally="true"/>
+
+            <EditText
+                android:id="@+id/currentPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_below="@id/phoneEditText"
+                android:hint="Current Password"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:padding="16dp"
+                android:textSize="14dp"
+                android:visibility="gone"
+                android:singleLine="true"
+                android:scrollHorizontally="true"/>
+
+            <EditText
+                android:id="@+id/newPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_below="@id/currentPasswordEditText"
+                android:hint="New Password"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:padding="16dp"
+                android:textSize="14dp"
+                android:visibility="gone"
+                android:singleLine="true"
+                android:scrollHorizontally="true"/>
+            <TextView
+                android:id="@+id/changePasswordTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/newPasswordEditText"
+                android:text="Change Password"
+                android:textColor="#001E90FF"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:singleLine="true"
+                android:scrollHorizontally="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:textColor="#9B826C"
+        android:backgroundTint="#F9F5EE"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

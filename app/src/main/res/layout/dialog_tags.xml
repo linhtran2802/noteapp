@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- RecyclerView hiển thị danh sách tags -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tagRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+    <!-- Input để thêm tag mới -->
+    <EditText
+        android:id="@+id/addTagEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Thêm tag mới"
+        android:padding="8dp"
+        android:background="@drawable/rounded_search_background"
+        android:textColor="#212121"
+        android:textColorHint="#DBCBB3" />
+
+    <!-- Nút thêm tag -->
+    <Button
+        android:id="@+id/addTagButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm Tag"
+        android:layout_marginTop="8dp" />
+
+    <!-- Nút lưu tags -->
+    <Button
+        android:id="@+id/saveTagsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lưu Tags"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

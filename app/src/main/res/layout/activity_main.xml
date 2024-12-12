@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFAF7"
+    tools:context=".MainActivity">
+
+    <!-- Thanh tìm kiếm -->
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_search_background"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="8dp"
+        android:hint="Tìm kiếm ghi chú"
+        android:padding="12dp"
+        android:textColor="#212121"
+        android:textColorHint="#DBCBB3" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/logo"
+        android:layout_below="@id/searchEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"/>
+
+    <!-- RecyclerView danh sách tag -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tagRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchEditText"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp"
+        android:scrollbars="horizontal"
+        android:clipToPadding="false" />
+
+
+    <!-- RecyclerView danh sách ghi chú -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/noteRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tagRecyclerView"
+        android:paddingHorizontal="16dp"
+        android:clipToPadding="false" />
+
+    <!-- Layout chứa các nút điều hướng với bố cục và kích thước điều chỉnh -->
+    <RelativeLayout
+        android:id="@+id/navigation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:tint="#9B826C"
+
+        android:padding="20dp">
+
+        <!-- Nút Home bên trái -->
+        <LinearLayout
+            android:id="@+id/homeButtonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="32dp"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/homeButton"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/home"
+                android:contentDescription="Home"/>
+
+        </LinearLayout>
+
+        <!-- Nút Add ở giữa và kích thước lớn hơn -->
+        <LinearLayout
+            android:id="@+id/addButtonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/addNoteButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/add"
+                android:contentDescription="Add Note"/>
+
+        </LinearLayout>
+
+        <!-- Nút Settings bên phải -->
+        <LinearLayout
+            android:id="@+id/settingsButtonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="32dp"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/settingsButton"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/settings"
+                android:contentDescription="Settings"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
